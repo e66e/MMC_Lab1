@@ -18,7 +18,7 @@ double measure(const gsl_rng *r, long n) {
     double acc = 0.0;
     moment t0 = teraz();
     for (long i = 0; i < n; ++i) {
-        acc += gsl_rng_uniform(r);   // liczba z [0,1)
+        acc += gsl_rng_uniform(r);
     }
     moment t1 = teraz();
     if (acc == -1.0) std::cerr << "unreachable\n";
