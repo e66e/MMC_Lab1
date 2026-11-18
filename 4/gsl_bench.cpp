@@ -55,7 +55,6 @@ int main() {
     std::ofstream out("czasy_gsl.txt");
     out << "# generator  n  time_ms  time_norm\n";
 
-    // Nagłówek dla czytelności
     std::cout << std::left
               << std::setw(22) << "generator"
               << std::setw(14) << "n"

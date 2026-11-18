@@ -26,7 +26,6 @@ long measure(Engine& gen, long n, double& checksum) {
     return ile_trwa(t0, t1);
 }
 
-// ---- Uruchomienie jednego generatora z adaptacyjną długością ciągu ----
 template <class Engine>
 void run_engine(const std::string& name,
                 std::ofstream& out,
@@ -54,7 +53,7 @@ void run_engine(const std::string& name,
         t_us = measure(gen, n, checksum);
         if (t_us >= target_us) break;
         n *= 2;
-        if (n > (1L << 34)) break;   // zabezpieczenie
+        if (n > (1L << 34)) break;
     }
 
     double t_ms = t_us / 1000.0;
